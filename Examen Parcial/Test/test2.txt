@@ -1,0 +1,5 @@
+int main ( ) {
+	if ( Identifier != Value ) {
+		( op Identifier + ( op Identifier + Value ) ) ;
+	}
+}

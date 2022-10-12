@@ -1,0 +1,7 @@
+int main ( ) {
+  call Identifier ( ) ;
+  while ( Identifier != Value ) {
+    op Identifier + Value ;
+  }
+  return 0 ;
+}

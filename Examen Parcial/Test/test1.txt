@@ -1,0 +1,7 @@
+void Identifier ( ) {
+	Type Identifier = StateValue ;
+  Identifier = StateValue ;
+}
+int main ( ) {
+	Type Identifier = StateValue ;
+}

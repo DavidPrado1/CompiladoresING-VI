@@ -1,0 +1,62 @@
+Program -> Program1Mas MainClass
+Program1 -> FuncDeclaration
+Program1 -> VoidDeclaration
+Program1Mas -> Program1 Program1Mas
+Program1Mas -> ''
+FuncDeclaration -> Type Identifier ( Declaration1 ) { BodyMas return }
+Declaration1 -> Type Identifier Declaration2
+Declaration1 -> ''
+Declaration2 -> , Type Identifier Declaration2
+Declaration2 -> ''
+VoidDeclaration -> void Identifier ( Declaration1 ) { BodyMas }
+Body -> Statement ;
+Body -> StructureControl
+Body -> Operation ;
+Body -> Call ;
+BodyMas -> Body BodyMas
+BodyMas -> ''
+Statement -> Statement1
+Statement -> Statement2
+Statement1 -> Type Identifier = StateValue
+Statement2 -> Identifier = StateValue
+MainClass -> int main ( ) { BodyMas MainRet }
+MainRet -> return 0 ;
+MainRet -> ''
+CompSign -> <
+CompSign -> >
+CompSign -> <=
+CompSign -> >=
+CompSign -> ==
+CompSign -> !=
+Comparasion -> ReturnValue CompSign ReturnValue
+ReturnValue -> Identifier
+ReturnValue -> Value 
+OpSing -> +
+OpSing -> -
+OpSing -> *
+OpSing -> /
+Operation -> op Oper1 OpSing Oper2
+Operation -> ( op Oper1 OpSing Oper2 )
+Oper1 -> Value
+Oper1 -> Operation
+Oper1 -> Identifier
+Oper2 -> Value
+Oper2 -> Operation
+Oper2 -> Identifier
+Call -> call Identifier ( Parameter1 )
+Parameter1 -> ReturnValue Parameter2
+Parameter1 -> ''
+Parameter2 -> , ReturnValue Parameter2 
+Parameter2 -> ''
+StructureControl -> StructureControl1
+StructureControl -> StructureControl2
+StructureControl -> StructureControl3
+StructureControl1 -> if ( Comparasion ) { BodyMas }
+StructureControl2 -> while ( Comparasion ) { BodyMas }
+StructureControl3 -> for ( ForBody ) { BodyMas }
+ForBody -> Statement ; Comparasion ; Identifier Iter
+ForBody -> ; ;
+Iter -> ++
+Iter -> --
+
+Type Identifier ( Type Identifier , Type Identifier ) { Type Identifier = StateValue ; return Identifier } int main ( ) { Identifier = StateValue ; if ( Identifier <= Value ) { Identifier = StateValue ; ( op Identifier + ( op Identifier + Value ) ) ; call Identifier ( ) ; for ( ; ; ) { Identifier = StateValue ; } while ( Identifier != Value ) { op Identifier + Value ; } } }

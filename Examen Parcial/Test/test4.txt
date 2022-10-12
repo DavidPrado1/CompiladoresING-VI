@@ -1,0 +1,6 @@
+int main ( ) {
+    call Identifier ( ) ;
+    for ( Identifier = StateValue ; Identifier <= Value ; Identifier ++ ) {
+        Identifier = StateValue ;
+    }
+}

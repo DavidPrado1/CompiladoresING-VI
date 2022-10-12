@@ -1,0 +1,6 @@
+Type Identifier ( Type Identifier , Type Identifier ) {
+	Type Identifier = StateValue ;
+	return Identifier
+}
+int main ( ) {
+}
