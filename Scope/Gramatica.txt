@@ -1,0 +1,74 @@
+Program -> Program1Mas MainClass
+Program1 -> FuncDeclaration
+Program1 -> VoidDeclaration
+Program1Mas -> Program1 Newline Program1Mas
+Program1Mas -> ''
+FuncDeclaration -> Type ID LPAREN Declaration1 RPAREN LLLAVE Coment Newline BodyMas RETURN ReturnValue Coment Newline RLLAVE Coment Newline
+Declaration1 -> Type ID Declaration2
+Declaration1 -> ''
+Declaration2 -> COMA Type ID Declaration2
+Declaration2 -> ''
+VoidDeclaration -> void ID LPAREN Declaration1 RPAREN LLLAVE Coment Newline BodyMas RLLAVE Coment Newline
+Body -> Statement FIN Coment Newline
+Body -> StructureControl
+Body -> Operation FIN Coment Newline
+Body -> Call FIN Coment Newline
+BodyMas -> Body BodyMas
+BodyMas -> ''
+Statement -> Statement1
+Statement -> Statement2
+Statement1 -> Type ID ASIGNACION ReturnValue
+Statement2 -> ID ASIGNACION ReturnValue
+MainClass -> MAIN LPAREN RPAREN LLLAVE Coment Newline BodyMas MainRet RLLAVE Coment
+MainRet -> RETURN NUMBER FIN Coment Newline
+MainRet -> ''
+CompSign -> MENOR
+CompSign -> MAYOR
+CompSign -> MENORIGUAL
+CompSign -> MAYORIGUAL
+CompSign -> IGUAL
+CompSign -> DIFERENTE
+Comparasion -> ReturnValue CompSign ReturnValue
+ReturnValue -> ID
+ReturnValue -> Value 
+OpSing -> PLUS
+OpSing -> MINUS
+OpSing -> TIMES
+OpSing -> DIVIDE
+Operation -> OP Oper1 OpSing Oper2
+Operation -> LPAREN OP Oper1 OpSing Oper2 RPAREN
+Oper1 -> Value
+Oper1 -> Operation
+Oper1 -> ID
+Oper2 -> Value
+Oper2 -> Operation
+Oper2 -> ID
+Call -> CALL ID LPAREN Parameter1 RPAREN
+Parameter1 -> ReturnValue Parameter2
+Parameter1 -> ''
+Parameter2 -> COMA ReturnValue Parameter2 
+Parameter2 -> ''
+StructureControl -> StructureControl1
+StructureControl -> StructureControl2
+StructureControl -> StructureControl3
+StructureControl1 -> if LPAREN Comparasion RPAREN LLLAVE Coment Newline BodyMas RLLAVE Coment Newline
+StructureControl2 -> while LPAREN Comparasion RPAREN LLLAVE Coment Newline BodyMas RLLAVE Coment Newline
+StructureControl3 -> for LPAREN ForBody RPAREN LLLAVE Coment Newline BodyMas RLLAVE Coment Newline
+ForBody -> Statement FIN Comparasion FIN ID Iter
+ForBody -> FIN FIN
+Iter -> PLUSPLUS
+Iter -> MINUSMINUS
+Type -> T_BOOLEAN
+Type -> T_INTEGER
+Type -> T_CHARACTER
+Type -> T_STRING
+Type -> T_FLOAT
+Value -> NUMBER
+Value -> CARACTER
+Value -> FLOAT
+Value -> STRING
+Value -> TRUE
+Value -> FALSE
+Coment -> ''
+Coment -> COMMENT
+Newline -> newline

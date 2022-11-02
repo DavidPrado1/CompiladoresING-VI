@@ -1,0 +1,16 @@
+int test ( int g , string mo ) {
+  int p = 2 ;
+  int a = 2 ;
+  float h = x ;
+  call lak ( 6 ) ;
+  o = "hola" ;
+  return a
+}
+
+main ( ) {
+	bool hello = true ;
+  int a = 5.6 ;
+  if ( a == false ) {
+		a = 34 ;
+	}
+}

@@ -1,0 +1,25 @@
+int test ( int g , string mo ) {
+  int p = 2 ;
+  int a = 2 ;
+  return a
+}
+
+int t2 ( int gj , string mk ) {
+  int g = 12 ; v-: hola
+  int a1 = 2 ;
+  op ( op a1 + 3 ) + 221 ;
+  call test ( g , a1 ) ;
+  return g
+}
+
+void hola ( int g ) {
+  int j = 12 ;
+}
+
+main ( ) {
+	bool hello = true ;
+  int a = 5.6 ;
+  if ( a == false ) {
+		a = 34 ;
+	}
+}
